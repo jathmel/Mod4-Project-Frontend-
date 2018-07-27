@@ -4,9 +4,10 @@ import React, {
 
 class PlanetItem extends Component {
   render() {
+    console.log(this.props)
     return (
       <div className="PlanetItem">
-         <h1> {this.props.planet.name} </h1>
+         <img src={this.props.planet.img_url} />
 
       </div>
     );
