@@ -7,6 +7,7 @@ class SpaceContainer extends Component {
 
   state = {
     planets: []
+    singlePlanetDetail: ''
   }
 
   componentDidMount() {
@@ -25,6 +26,7 @@ class SpaceContainer extends Component {
       <div className="SpaceContainer">
 
         <PlanetList planets={this.state.planets}/>
+        <PlanetDetail singlePlanetDetail={this.state.singlePlanetDetail} />
 
       </div>
     );
