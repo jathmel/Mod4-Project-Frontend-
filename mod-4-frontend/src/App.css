@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  background-color: white;
+  background-image: url(./media/darkrift-orig_full.jpg);
+  background-size: cover
+
+
 }
 
 .App-logo {

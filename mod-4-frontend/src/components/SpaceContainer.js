@@ -1,17 +1,19 @@
 import React, {
   Component
 } from 'react';
-import PlanetList from './PlanetList'
+import PlanetList from './PlanetList';
+import PlanetDetail from './PlanetDetail'
 
 class SpaceContainer extends Component {
 
   state = {
-    planets: []
-    singlePlanetDetail: ''
+    planets: [],
+    singlePlanetDetail: '',
+    showSinglePlanet: false
   }
 
   componentDidMount() {
-    fetch('http://localhost:4000/planets')
+    fetch('https://dry-plains-91502.herokuapp.com/planets.json')
       .then(r => r.json())
       .then((data) => {
         console.log(data)
@@ -21,12 +23,31 @@ class SpaceContainer extends Component {
       })
 
   }
+
+  handlePlanetClick = (planet) => {
+    this.setState({
+      singlePlanetDetail: planet,
+      showSinglePlanet: true
+    })
+  }
+
+  showPage () {
+    if (this.state.showSinglePlanet) {
+      return (
+        <PlanetDetail singlePlanetDetail={this.state.singlePlanetDetail}  />
+      )
+    } else {
+      return (
+        <PlanetList planets={this.state.planets} handlePlanetClick={this.handlePlanetClick}/>
+      )
+
+    }
+  }
   render() {
     return (
       <div className="SpaceContainer">
 
-        <PlanetList planets={this.state.planets}/>
-        <PlanetDetail singlePlanetDetail={this.state.singlePlanetDetail} />
+        {this.showPage()}
 
       </div>
     );

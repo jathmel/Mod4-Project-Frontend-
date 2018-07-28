@@ -5,7 +5,7 @@ import PlanetItem from './PlanetItem'
 
 class PlanetList extends Component {
   renderPlanets = () => {
-    return this.props.planets.map(planet => <PlanetItem planet={planet} key={planet.id}/>)
+    return this.props.planets.map(planet => <PlanetItem planet={planet} key={planet.id} handlePlanetClick={this.props.handlePlanetClick} />)
   }
   render() {
     return (
