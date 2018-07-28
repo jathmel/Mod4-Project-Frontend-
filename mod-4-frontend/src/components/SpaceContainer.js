@@ -11,7 +11,7 @@ class SpaceContainer extends Component {
   }
 
   componentDidMount() {
-    fetch('https://dry-plains-91502.herokuapp.com/planets')
+    fetch('http://localhost:4000/planets')
       .then(r => r.json())
       .then((data) => {
         console.log(data)
