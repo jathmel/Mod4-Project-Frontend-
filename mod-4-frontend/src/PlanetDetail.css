@@ -1,0 +1,16 @@
+.PlanetDetail {
+  /* textAlign:center; */
+  width:50%;
+  margin-left: 0%;
+  top:25%;
+  position:relative;
+  /* display: block; */
+}
+
+#imgDetail {
+  width:50%;
+  margin-left: 60%;
+  top:25%;
+  position:relative;
+  display: inline-block;
+}

@@ -31,10 +31,16 @@ class SpaceContainer extends Component {
     })
   }
 
+  handleDetailClick = () => {
+    this.setState({
+      showSinglePlanet: !this.state.showSinglePlanet
+    })
+  }
+
   showPage () {
     if (this.state.showSinglePlanet) {
       return (
-        <PlanetDetail singlePlanetDetail={this.state.singlePlanetDetail}  />
+        <PlanetDetail handleDetailClick={this.handleDetailClick} singlePlanetDetail={this.state.singlePlanetDetail}  />
       )
     } else {
       return (
