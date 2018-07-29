@@ -1,4 +1,60 @@
-.PlanetItem {
-  animation: PlanetItem-spin infinite 20s linear;
-  height: 80px;
+.IndivPlanetItem {
+  /* animation: IndivPlanetItem-spin infinite 20s linear; */
+  height: 50px;
+  width: 50px;
+  margin-left: 15px;
+
+}
+
+/* @keyframes IndivPlanetItem-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+} */
+.PlanetItem{
+  display:inline-block;
+}
+
+#Mercury {
+    display:flex;
+    height: 25px;
+    width: 25px;
+
+}
+#Venus {
+  height: 60px;
+  width: 60px;
+}
+#Earth {
+    /* display:inline-block; */
+    height: 50px;
+    width: 100px;
+}
+#Moon{
+    /* display:inline-block; */
+    height: 5px;
+    width: 5px;
+}
+#Mars {
+    height: 45px;
+    width: 45px;
+}
+#Jupiter {
+  height: 120px;
+  width: 120px;
+}
+#Saturn {
+  height: 110px;
+  width: 110px;
+}
+#Neptune {
+  height: 50px;
+  width: 50px;
+}
+#Uranus {
+  height: 60px;
+  width: 60px;
+}
+#Pluto {
+  height: 15px;
+  width: 15px;
 }

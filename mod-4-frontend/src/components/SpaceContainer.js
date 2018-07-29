@@ -28,14 +28,20 @@ class SpaceContainer extends Component {
   handlePlanetClick = (planet) => {
     this.setState({
       singlePlanetDetail: planet,
-      showSinglePlanet: true
+      showSinglePlanet: !this.state.showSinglePlanet
+    })
+  }
+
+  handleDetailClick = () => {
+    this.setState({
+      showSinglePlanet: !this.state.showSinglePlanet
     })
   }
 
   showPage () {
     if (this.state.showSinglePlanet) {
       return (
-        <PlanetDetail singlePlanetDetail={this.state.singlePlanetDetail}  />
+        <PlanetDetail handleDetailClick={this.handleDetailClick} singlePlanetDetail={this.state.singlePlanetDetail}  />
       )
     } else {
       return (
@@ -46,7 +52,7 @@ class SpaceContainer extends Component {
   }
   render() {
     return (
-      <div className="SpaceContainer">
+      <div className="SpaceContainer" style={{height:"100%"}}>
 
         {this.showPage()}
 

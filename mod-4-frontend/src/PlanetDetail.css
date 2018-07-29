@@ -1,0 +1,27 @@
+.DetailContainer {
+  textAlign:center;
+  width:100%;
+  margin-left: 0%;
+  top:25%;
+  position:relative;
+  display: block;
+}
+
+.PlanetDetail {
+  /* textAlign:center;
+  width:100%;
+  margin-left: 0%;
+  top:25%;
+  position:relative; */
+  /* display: block; */
+}
+
+#imgDetail {
+  /* width:50%; */
+  /* margin-left: 15px; */
+  /* top:25%; */
+  /* position:relative; */
+  /* display: inline-block; */
+}
+
+tr:nth-child(even) {background-color: grey;}
