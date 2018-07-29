@@ -18,10 +18,10 @@
 
 #imgDetail {
   /* width:50%; */
-  margin-left: 15px;
+  /* margin-left: 15px; */
   /* top:25%; */
   /* position:relative; */
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 tr:nth-child(even) {background-color: grey;}
