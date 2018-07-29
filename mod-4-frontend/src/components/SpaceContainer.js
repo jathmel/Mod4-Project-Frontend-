@@ -9,7 +9,8 @@ class SpaceContainer extends Component {
   state = {
     planets: [],
     singlePlanetDetail: '',
-    showSinglePlanet: false
+    showSinglePlanet: false,
+    hoverName: ''
   }
 
   componentDidMount() {
@@ -38,7 +39,7 @@ class SpaceContainer extends Component {
       )
     } else {
       return (
-        <PlanetList planets={this.state.planets} handlePlanetClick={this.handlePlanetClick}/>
+        <PlanetList planets={this.state.planets} handlePlanetClick={this.handlePlanetClick} hoverName={this.state.hoverName}/>
       )
 
     }
