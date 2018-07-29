@@ -7,7 +7,7 @@ class PlanetItem extends Component {
     console.log(this.props)
     return (
       <div className="PlanetItem" onClick={(e) => this.props.handlePlanetClick(this.props.planet)}>
-         <img className="IndivPlanetItem" src={require(`../media/${this.props.planet.name.toLowerCase()}.png`)} alt='nothing' />
+         <img className="PlanetItem" id={this.props.planet.name} src={require(`../media/${this.props.planet.name}.gif`)} alt='nothing' />
 
 
       </div>

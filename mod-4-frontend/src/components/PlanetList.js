@@ -11,7 +11,7 @@ class PlanetList extends Component {
   render() {
     return (
       <div className="PlanetList" style={{top: "50%", position:"relative", textAlign:"center"}}>
-        <img src={sun} alt='nothing' width="50" height="50" />
+        <img src={sun} alt='nothing' width="150" height="150" />
         {this.renderPlanets()}
 
       </div>
