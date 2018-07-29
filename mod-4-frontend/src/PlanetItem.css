@@ -1,60 +1,146 @@
-.IndivPlanetItem {
-  /* animation: IndivPlanetItem-spin infinite 20s linear; */
-  height: 50px;
-  width: 50px;
-  margin-left: 15px;
-
-}
-
-/* @keyframes IndivPlanetItem-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-} */
-.PlanetItem{
+/* .PlanetItem{
   display:inline-block;
-}
+} */
 
 #Mercury {
+    position: absolute;
+    left: 0px;
+    top: 70px;
     display:flex;
     height: 25px;
     width: 25px;
+    -webkit-animation: mercuryOrbit 30s linear infinite;
+}
 
+@-webkit-keyframes mercuryOrbit {
+    from { -webkit-transform: rotate(90deg) translateX(200px) translateY(5px) rotate(270deg);}
+    to   { -webkit-transform: rotate(360deg) translateX(5px) translateY(200px) rotate(-360deg); }
 }
+
 #Venus {
-  height: 60px;
-  width: 60px;
+    position: absolute;
+    left: 0px;
+    top: 70px;
+    height: 60px;
+    width: 60px;
+    -webkit-animation: venusOrbit 120s linear infinite;
 }
+
+@-webkit-keyframes venusOrbit {
+    from { -webkit-transform: rotate(90deg) translateX(300px) translateY(5px) rotate(270deg);}
+    to   { -webkit-transform: rotate(360deg) translateX(5px) translateY(300px) rotate(-360deg); }
+}
+
 #Earth {
-    /* display:inline-block; */
-    height: 50px;
+    position: absolute;
+    left: 0px;
+    top: 70px;
+    height: 100px;
     width: 100px;
+    -webkit-animation: earthOrbit 120s linear infinite;
 }
-#Moon{
-    /* display:inline-block; */
+
+@-webkit-keyframes earthOrbit {
+    from { -webkit-transform: rotate(90deg) translateX(300px) translateY(5px) rotate(270deg);}
+    to   { -webkit-transform: rotate(360deg) translateX(5px) translateY(300px) rotate(-360deg); }
+}
+
+#Moon {
+    position: absolute;
+    left: 0px;
+    top: 70px;
     height: 5px;
     width: 5px;
+    -webkit-animation: moonOrbit 120s linear infinite;
 }
+
+@-webkit-keyframes moonOrbit {
+    from { -webkit-transform: rotate(90deg) translateX(300px) translateY(5px) rotate(270deg);}
+    to   { -webkit-transform: rotate(360deg) translateX(5px) translateY(300px) rotate(-360deg); }
+}
+
 #Mars {
+    position: absolute;
+    left: 0px;
+    top: 70px;
     height: 45px;
     width: 45px;
+    -webkit-animation: marsOrbit 120s linear infinite;
 }
+
+@-webkit-keyframes marsOrbit {
+    from { -webkit-transform: rotate(90deg) translateX(300px) translateY(5px) rotate(270deg);}
+    to   { -webkit-transform: rotate(360deg) translateX(5px) translateY(300px) rotate(-360deg); }
+}
+
 #Jupiter {
-  height: 120px;
-  width: 120px;
+    position: absolute;
+    left: 0px;
+    top: 70px;
+    height: 120px;
+    width: 120px;
+    -webkit-animation: jupiterOrbit 120s linear infinite;
 }
+
+@-webkit-keyframes jupiterOrbit {
+    from { -webkit-transform: rotate(90deg) translateX(300px) translateY(5px) rotate(270deg);}
+    to   { -webkit-transform: rotate(360deg) translateX(5px) translateY(300px) rotate(-360deg); }
+}
+
 #Saturn {
-  height: 110px;
-  width: 110px;
+    position: absolute;
+    left: 0px;
+    top: 70px;
+    height: 110px;
+    width: 110px;
+    -webkit-animation: saturnOrbit 120s linear infinite;
 }
+
+@-webkit-keyframes saturnOrbit {
+  from { -webkit-transform: rotate(90deg) translateX(300px) translateY(5px) rotate(270deg);}
+  to   { -webkit-transform: rotate(360deg) translateX(5px) translateY(300px) rotate(-360deg); }
+}
+
 #Neptune {
-  height: 50px;
-  width: 50px;
+    position: absolute;
+    left: 0px;
+    top: 70px;
+    height: 50px;
+    width: 50px;
+    -webkit-animation: neptuneOrbit 120s linear infinite;
 }
+
+@-webkit-keyframes neptuneOrbit {
+    from { -webkit-transform: rotate(90deg) translateX(300px) translateY(5px) rotate(270deg);}
+    to   { -webkit-transform: rotate(360deg) translateX(5px) translateY(300px) rotate(-360deg); }
+}
+
+
 #Uranus {
-  height: 60px;
-  width: 60px;
+    position: absolute;
+    left: 0px;
+    top: 70px;
+    height: 60px;
+    width: 60px;
+    -webkit-animation: uranusOrbit 120s linear infinite;
 }
+
+@-webkit-keyframes uranusOrbit {
+    from { -webkit-transform: rotate(90deg) translateX(300px) translateY(5px) rotate(270deg);}
+    to   { -webkit-transform: rotate(360deg) translateX(5px) translateY(300px) rotate(-360deg); }
+}
+
+
 #Pluto {
-  height: 15px;
-  width: 15px;
+    position: absolute;
+    left: 0px;
+    top: 70px;
+    height: 15px;
+    width: 15px;
+    -webkit-animation: plutoOrbit 120s linear infinite;
+}
+
+@-webkit-keyframes plutoOrbit {
+    from { -webkit-transform: rotate(90deg) translateX(300px) translateY(5px) rotate(270deg);}
+    to   { -webkit-transform: rotate(360deg) translateX(5px) translateY(300px) rotate(-360deg); }
 }

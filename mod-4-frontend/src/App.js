@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <video src={video} autoplay={'true'} loop style={{position:"absolute", height:"100%", zIndex:"-1"}}></video>
+        <video src={video} autoPlay={'true'} loop style={{position:"absolute", height:"100%", zIndex:"-1"}}></video>
         <SpaceContainer />
       </div>
     );

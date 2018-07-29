@@ -9,7 +9,7 @@ class PlanetDetail extends Component {
       <div id="DetailContainer">
         <img id="imgDetail" src={require(`../media/${this.props.singlePlanetDetail.name}.gif`)} alt='nothing' />
         <table id="PlanetDetail">
-          <tr  style={{margin:"0", fontSize:"50px"}}> {this.props.singlePlanetDetail.name} </tr>
+          <tr style={{margin:"0", fontSize:"50px"}}> {this.props.singlePlanetDetail.name} </tr>
           <tr>
             <td>density:</td>
             <td>{this.props.singlePlanetDetail.density}</td>
@@ -42,8 +42,12 @@ class PlanetDetail extends Component {
             <td>orbital period:</td>
             <td>{this.props.singlePlanetDetail.orbital_period}</td>
           </tr>
+          <tr>
+          </tr>
+          <tr>
+            <button onClick= {(e)=> {this.props.handleDetailClick()}} type="button">Finished Reading!</button>
+          </tr>
         </table>
-        <button onClick= {(e)=> {this.props.handleDetailClick()}} type="button">Finished Reading!</button>
       </div>
     );
   }

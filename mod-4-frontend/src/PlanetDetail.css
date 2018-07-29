@@ -1,27 +1,28 @@
-.DetailContainer {
-  textAlign:center;
-  width:100%;
-  margin-left: 0%;
+#DetailContainer {
+  width:70%;
+  margin-left: 30%;
   top:25%;
   position:relative;
-  display: block;
+  /* text-align: center; */
+  /* display: inline-block; */
 }
 
-.PlanetDetail {
-  /* textAlign:center;
+#PlanetDetail {
+  /* text-align: center;
   width:100%;
   margin-left: 0%;
   top:25%;
   position:relative; */
-  /* display: block; */
+  display: inline-block;
 }
 
 #imgDetail {
-  /* width:50%; */
-  /* margin-left: 15px; */
-  /* top:25%; */
-  /* position:relative; */
-  /* display: inline-block; */
+  width:250px;
+  height:250px;
+  /* margin-left: 15px;
+  top:25%;
+  position:relative; */
+  display: inline-block;
 }
 
 tr:nth-child(even) {background-color: grey;}
