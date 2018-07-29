@@ -5,8 +5,8 @@ import React, {
 class PlanetDetail extends Component {
   render() {
     return (
-      <div className="PlanetDetail">
-          <h1> {this.props.singlePlanetDetail.name} </h1>
+      <div className="PlanetDetail" >
+          <h1 style={{margin:"0"}}> {this.props.singlePlanetDetail.name} </h1>
           <p> density: {this.props.singlePlanetDetail.density} </p>
           <p> distance from sun: {this.props.singlePlanetDetail.distance_from_sun} km </p>
           <p> gravity: {this.props.singlePlanetDetail.gravity} </p>

@@ -2,6 +2,7 @@ import React, {
   Component
 } from 'react';
 import PlanetItem from './PlanetItem'
+import sun from '../media/sun.png'
 
 class PlanetList extends Component {
   renderPlanets = () => {
@@ -9,7 +10,8 @@ class PlanetList extends Component {
   }
   render() {
     return (
-      <div className="PlanetList">
+      <div className="PlanetList" style={{top: "50%", position:"relative", textAlign:"center"}}>
+        <img src={sun} alt='nothing' width="50" height="50" />
         {this.renderPlanets()}
 
       </div>
