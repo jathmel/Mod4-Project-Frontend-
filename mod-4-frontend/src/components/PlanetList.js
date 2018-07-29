@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import PlanetItem from './PlanetItem'
 import sun from '../media/sun.png'
+import HoverName from './HoverName'
 
 class PlanetList extends Component {
-  
+
   renderPlanets = () => {
+    console.log(this.props);
     return this.props.planets.map(planet => <PlanetItem planet={planet} key={planet.id} handlePlanetClick={this.props.handlePlanetClick}
-    hoverName={this.props.hoverName} />)
+    hoverName={this.props.hoverName} handlePlanetHover={this.props.handlePlanetHover} />)
   }
 
   render() {
