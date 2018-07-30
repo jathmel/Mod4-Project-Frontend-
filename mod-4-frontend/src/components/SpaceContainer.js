@@ -8,7 +8,8 @@ class SpaceContainer extends Component {
     planets: [],
     singlePlanetDetail: '',
     showSinglePlanet: false,
-    hoverName: ''
+    hoverName: '',
+    isHovered: false
   }
 
   componentDidMount() {
@@ -29,24 +30,33 @@ class SpaceContainer extends Component {
     })
   }
 
+  // showPlanetName = () => {
+  //   const planetNameArr=["Earth", "Mars", "Venus", "Jupiter", "Uranus", "Saturn", "Neptune", "Mercury"]
+  //   if (this.state.hoverName.includes(planetNameArr) ) {
+  //     return (console.log("hiiiiiii"))
+  //   }
+  // }
+
+
+
   handleDetailClick = () => {
     this.setState({
       showSinglePlanet: !this.state.showSinglePlanet
     })
   }
 
-  handlePlanetHover = (e) => {
-      this.setState({
-        hoverName: e.name
-      })
-    }
-
-
   handleMouseOut = () => {
     this.setState({
-      hoverName: ''
+      hoverName: '',
+      // isHovered: !this.state.isHovered
     })
   }
+
+  handlePlanetHover = (planet) => {
+      this.setState({
+        isHovered: !this.state.isHovered
+      })
+    }
 
   showPage () {
     if (this.state.showSinglePlanet) {
@@ -55,11 +65,14 @@ class SpaceContainer extends Component {
       )
     } else {
       return (
-        <PlanetList planets={this.state.planets} handlePlanetClick={this.handlePlanetClick} hoverName={this.state.hoverName} handlePlanetHover={this.handlePlanetHover} />
+        <PlanetList planets={this.state.planets} handlePlanetClick={this.handlePlanetClick} hoverName={this.state.hoverName}
+        handlePlanetHover={this.handlePlanetHover} isHovered={this.state.isHovered}/>
       )
 
     }
   }
+
+
   render() {
     return (
       <div className="SpaceContainer" style={{height:"100%"}} onMouseOver={this.handleMouseOut}>

@@ -1,21 +1,9 @@
-.IndivPlanetItem {
-  /* animation: IndivPlanetItem-spin infinite 20s linear; */
-  height: 50px;
-  width: 50px;
-  margin-left: 15px;
 
-}
-
-/* @keyframes IndivPlanetItem-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-} */
 .PlanetItem{
   display:inline-block;
 }
 
 #Mercury {
-    display:flex;
     height: 25px;
     width: 25px;
 
@@ -57,4 +45,8 @@
 #Pluto {
   height: 15px;
   width: 15px;
+}
+
+#ptag {
+  font-color:black;
 }
