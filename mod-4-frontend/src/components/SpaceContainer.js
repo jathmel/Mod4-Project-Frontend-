@@ -1,6 +1,4 @@
-import React, {
-  Component
-} from 'react';
+import React, { Component } from 'react';
 import PlanetList from './PlanetList';
 import PlanetDetail from './PlanetDetail'
 
@@ -9,14 +7,14 @@ class SpaceContainer extends Component {
   state = {
     planets: [],
     singlePlanetDetail: '',
-    showSinglePlanet: false
+    showSinglePlanet: false,
+    hoverName: ''
   }
 
   componentDidMount() {
     fetch('https://dry-plains-91502.herokuapp.com/planets.json')
       .then(r => r.json())
       .then((data) => {
-        console.log(data)
         this.setState({
           planets: data
         })
@@ -37,21 +35,34 @@ class SpaceContainer extends Component {
     })
   }
 
+  handlePlanetHover = (e) => {
+      this.setState({
+        hoverName: e.name
+      })
+    }
+
+
+  handleMouseOut = () => {
+    this.setState({
+      hoverName: ''
+    })
+  }
+
   showPage () {
     if (this.state.showSinglePlanet) {
       return (
-        <PlanetDetail handleDetailClick={this.handleDetailClick} singlePlanetDetail={this.state.singlePlanetDetail}  />
+        <PlanetDetail handleDetailClick={this.handleDetailClick} singlePlanetDetail={this.state.singlePlanetDetail} />
       )
     } else {
       return (
-        <PlanetList planets={this.state.planets} handlePlanetClick={this.handlePlanetClick}/>
+        <PlanetList planets={this.state.planets} handlePlanetClick={this.handlePlanetClick} hoverName={this.state.hoverName} handlePlanetHover={this.handlePlanetHover} />
       )
 
     }
   }
   render() {
     return (
-      <div className="SpaceContainer" style={{height:"100%"}}>
+      <div className="SpaceContainer" style={{height:"100%"}} onMouseOver={this.handleMouseOut}>
 
         {this.showPage()}
 

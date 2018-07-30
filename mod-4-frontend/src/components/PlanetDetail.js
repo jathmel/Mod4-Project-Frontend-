@@ -1,7 +1,7 @@
-import React, {
-  Component
-} from 'react';
+
+import React, { Component } from 'react';
 import '../PlanetDetail.css'
+
 
 class PlanetDetail extends Component {
   render() {
