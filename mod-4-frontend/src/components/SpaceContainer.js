@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PlanetList from './PlanetList';
 import PlanetDetail from './PlanetDetail'
-
+import NavBar from './NavBar'
 class SpaceContainer extends Component {
 
   state = {
@@ -19,7 +19,6 @@ class SpaceContainer extends Component {
           planets: data
         })
       })
-
   }
 
   handlePlanetClick = (planet) => {
@@ -57,15 +56,13 @@ class SpaceContainer extends Component {
       return (
         <PlanetList planets={this.state.planets} handlePlanetClick={this.handlePlanetClick} hoverName={this.state.hoverName} handlePlanetHover={this.handlePlanetHover} />
       )
-
     }
   }
   render() {
     return (
       <div className="SpaceContainer" style={{height:"100%"}} onMouseOver={this.handleMouseOut}>
-
+        <NavBar />
         {this.showPage()}
-
       </div>
     );
   }

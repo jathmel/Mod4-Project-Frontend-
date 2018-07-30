@@ -28,4 +28,4 @@
   padding:15px;
 }
 
-tr:nth-child(even) {background-color: grey;}
+tr:nth-child(even) {background: linear-gradient(to bottom, rgba(192,192,192,0.4) 0%, rgba(192,192,192,0.4) 100%);}
