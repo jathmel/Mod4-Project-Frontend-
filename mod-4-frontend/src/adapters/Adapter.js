@@ -12,10 +12,13 @@ const createUser = (name, username, password) => {
   }
   return fetch(userURL, options).then(response => response.json())
 }
+
 const getUser = (username, password) => {
   fetch(userURL).then(response => response.json())
 
 }
+
 export {
-  createUser
+  createUser,
+  getUser
 }
