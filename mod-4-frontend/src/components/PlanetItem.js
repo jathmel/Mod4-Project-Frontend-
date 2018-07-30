@@ -6,7 +6,6 @@ import '../PlanetItem.css';
 class PlanetItem extends Component {
 
 
-
   showItemPage = () => {
     console.log(this.props.isHovered)
     if (this.props.isHovered) {
@@ -23,9 +22,10 @@ class PlanetItem extends Component {
         <div  className="PlanetItem"
         onClick={(e) => this.props.handlePlanetClick(this.props.planet)}
         onMouseOver={(e) => this.props.handlePlanetHover(this.props.planet) } >
-          <img id={this.props.planet.name} src={require(`../media/${this.props.planet.name}.gif`)} alt='nothing'/>
+          <img id={this.props.planet.name} src={require(`../media/${this.props.planet.name}.png`)} alt='nothing'/>
           {this.showItemPage()}
        </div>
+
 
     );
   }
