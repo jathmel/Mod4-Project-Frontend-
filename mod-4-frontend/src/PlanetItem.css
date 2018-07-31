@@ -3,6 +3,9 @@
   padding: 15px;
 } */
 
+.planetName{
+  position: absolute;
+}
 #Mercury {
   position: absolute;
   left:45px;
