@@ -6,9 +6,9 @@ import HoverName from './HoverName'
 class PlanetList extends Component {
 
   renderPlanets = () => {
-    console.log(this.props);
-    return this.props.planets.map(planet => <PlanetItem planet={planet} key={planet.id} handlePlanetClick={this.props.handlePlanetClick}
-    hoverName={this.props.hoverName} handlePlanetHover={this.props.handlePlanetHover} />)
+    return this.props.planets.map(planet => <PlanetItem planet={planet} key={planet.id} handlePlanetClick={this.props.handlePlanetClick} hoverName={this.props.hoverName} handlePlanetHover={this.props.handlePlanetHover} isHovered={this.props.isHovered}
+    />)
+
   }
 
   render() {

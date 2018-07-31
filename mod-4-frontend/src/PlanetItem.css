@@ -1,13 +1,15 @@
 /* .PlanetItem{
   display:inline-block;
+  padding: 15px;
 } */
 
+
+#hMoon {
+  height: 5px;
+  width: 5px;
+}
+
 #Mercury {
-    position: absolute;
-    left:45px;
-    top: 60px;
-    height: 25px;
-    width: 25px;
     -webkit-animation: mercuryOrbit 17s linear infinite;
 }
 
@@ -48,8 +50,6 @@
     position: absolute;
     left:45px;
     top: 60px;
-    height: 5px;
-    width: 5px;
     -webkit-animation: moonOrbit 49s linear infinite;
 }
 
@@ -142,3 +142,7 @@
   from { -webkit-transform: rotate(0deg)  translateX(700px) rotate(0deg);}
   to   { -webkit-transform: rotate(360deg)  translateX(700px) rotate(-360deg); }
 }
+
+/* .ptag {
+  font-color:black;
+} */
