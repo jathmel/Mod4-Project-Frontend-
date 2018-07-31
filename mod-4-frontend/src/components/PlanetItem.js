@@ -14,21 +14,20 @@ class PlanetItem extends Component {
       )
     }
   }
-
-  getImageSize() {
-    const sizes = [25,60,100,5,45,120,110,60,50,15]
-    let width =''
-    let i;
-
-    // for (let i=0; i<sizes.length; i++)
-    if (i === 0) {
-      sizes.forEach((size)=>{
-        width=(size+"px").toString()
-        console.log(width)
-        return (<img style={{width:width, height:width}} src={require(`../media/${this.props.planet.name}.png`)} alt='nothing'/>)
-      })
+  size = (name) => {
+  const sizes = {
+      Mercury: "25px",
+      Venus: "60px",
+      Earth: "100px",
+      Moon: "5px",
+      Mars: "45px",
+      Jupiter: "120px",
+      Saturn: "110px",
+      Uranus: "60px",
+      Neptune: "50px",
+      Pluto: "15px"
     }
-    i++
+    return sizes[name]
   }
 
 
@@ -37,8 +36,8 @@ class PlanetItem extends Component {
         <div id ={this.props.planet.name} className="PlanetItem"
         onClick={(e) => this.props.handlePlanetClick(this.props.planet)}
         onMouseOver={(e) => this.props.handlePlanetHover(this.props.planet) } >
-          {this.getImageSize()}
           {this.showItemPage()}
+          <img style={{width:this.size(this.props.planet.name), height:this.size(this.props.planet.name)}} src={require(`../media/${this.props.planet.name}.png`)} alt='nothing'/>
        </div>
 
 
