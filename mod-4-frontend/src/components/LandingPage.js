@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LogIn from './Log-In'
 import SignUp from './Sign-Up'
+import '../LandingPage.css'
 
 
 class LandingPage extends Component {
@@ -28,10 +29,10 @@ class LandingPage extends Component {
       })
     }
     logInForm = () => {
-      return <LogIn handleSubmit={this.props.handleSubmit} username={this.state.username} password={this.state.password} updateUsername={this.updateUsername} updatePassword={this.updatePassword}/>
+      return <LogIn handleLogIn={this.props.handleLogIn} username={this.state.username} password={this.state.password} updateUsername={this.updateUsername} updatePassword={this.updatePassword}/>
     }
     signUpForm = () => {
-      return <SignUp handleSubmit={this.props.handleSubmit} name={this.state.name} updateName={this.updateName} username={this.state.username} updateUsername={this.updateUsername} updatePassword={this.updatePassword} password={this.state.password}/>
+      return <SignUp handleSignUp={this.props.handleSignUp} name={this.state.name} updateName={this.updateName} username={this.state.username} updateUsername={this.updateUsername} updatePassword={this.updatePassword} password={this.state.password}/>
     }
 
   handleForm = (state) =>{
@@ -61,7 +62,7 @@ class LandingPage extends Component {
 
   render(){
     return(
-      <div>
+      <div className='container'>
         {this.renderForm()}
       </div>
     )

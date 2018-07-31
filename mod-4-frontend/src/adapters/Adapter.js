@@ -8,13 +8,13 @@ const createUser = (name, username, password) => {
     headers:{
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify()
+    body: JSON.stringify({user: user})
   }
   return fetch(userURL, options).then(response => response.json())
 }
 
-const getUser = (username, password) => {
-  fetch(userURL).then(response => response.json())
+const getUser = (username) => {
+  return fetch(`http://localhost:4000/api/v1/users/${username}`).then(response => response.json()).then(data => data)
 
 }
 

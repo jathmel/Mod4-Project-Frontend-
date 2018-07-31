@@ -7,6 +7,21 @@
 
 }
 
+.container > div {
+  background: #eee;
+  padding: 1em;
+}
+
+.conatainer > div:nth-child(odd){
+  background: #ddd;
+}
+.container {
+  display: grid;
+  grid-template-rows: 30% 70%;
+  grid-row-gap: 1em;
+  border: black
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
