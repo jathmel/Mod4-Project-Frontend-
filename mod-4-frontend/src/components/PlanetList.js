@@ -12,7 +12,7 @@ class PlanetList extends Component {
 
   render() {
     return (
-      <div className="PlanetList" style={{top: "350px", position:"relative"}}>
+      <div className="PlanetList" style={{top: "370px", position:"relative"}}>
         <img src={sun} alt='nothing' width="150" height="150" />
         {this.renderPlanets()}
       </div>
