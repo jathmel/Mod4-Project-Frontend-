@@ -84,7 +84,18 @@ class SpaceContainer extends Component {
   render() {
     return (
       <div className="SpaceContainer" style={{height:"100%"}} onMouseOver={this.handleMouseOut}>
-        <NavBar/>
+        <NavBar currentUser={this.state.currentUser}/>
+        <Switch>
+          <Route path="/profile" render={() => {
+              return <UserProfile currentUser={this.state.currentUser}/>
+            }}/>
+          <Route path="/Dashboard" render={() => {
+              return <PlanetList />
+            }}/>
+          <Route path="/login" render={() => {
+              return <UserProfile currentUser={this.state.currentUser}/>
+            }}/>
+        </Switch>
         {this.showPage()}
       </div>
     );

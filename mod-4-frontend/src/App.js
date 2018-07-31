@@ -12,6 +12,11 @@ class App extends Component {
     currentUser: ''
   }
 
+  logOut = () => {
+    this.setState({ currentUser: null })
+    this.props.history.push('/login')
+  }
+
   handleLogIn = (e, username, password) => {
     e.preventDefault()
     getUser(username).then(data => {
@@ -35,7 +40,7 @@ class App extends Component {
         <video className="video" src={video} autoPlay={'true'} loop> </video>
           {this.state.currentUser ?
           <div>
-            <SpaceContainer currentUser={this.state.currentUser}/>
+            <SpaceContainer currentUser={this.state.currentUser} logOut={this.logOut}/>
           </div>
           :
           <LandingPage handleSignUp={this.handleSignUp} handleLogIn={this.handleLogIn}/>}

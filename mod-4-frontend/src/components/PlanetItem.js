@@ -10,7 +10,7 @@ class PlanetItem extends Component {
     console.log(this.props.isHovered)
     if (this.props.isHovered) {
       return (
-        <p style={{color:"white"}}>{this.props.planet.name}</p>
+        <p className="planetName" style={{color:"white"}}>{this.props.planet.name}</p>
       )
     }
   }

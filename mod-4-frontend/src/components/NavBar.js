@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import UserProfile from './UserProfile'
 import '../NavBar.css'
 
 class Navbar extends Component {
   render() {
+    debugger
     return (
     <div id="sidebar-wrapper" >
       <ul className="sidebar-nav">
