@@ -31,16 +31,14 @@ class App extends Component {
   }
   render() {
     return (
-<<<<<<< HEAD
-      <div className="App container">
-        <div><h1>Space</h1></div>
-        {this.state.currentUser ? <h1>Welcome {this.state.currentUser.name.toUpperCase()}</h1> : <LandingPage handleSignUp={this.handleSignUp} handleLogIn={this.handleLogIn}/>}
-
-=======
       <div className="App">
-        <video src={video} autoPlay={'true'} loop style={{position:"absolute", height:"100%", zIndex:"-1"}}></video>
-        <SpaceContainer />
->>>>>>> jee
+        <div><h1>Space</h1></div>
+        {this.state.currentUser ?
+          <div>
+            <SpaceContainer />
+          </div>
+          :
+          <LandingPage handleSignUp={this.handleSignUp} handleLogIn={this.handleLogIn}/>}
       </div>
     );
   }

@@ -6,20 +6,15 @@ html,body,#root {
   text-align: center;
   background-color: white;
   /* background-image: url(./media/darkrift-orig_full.jpg); */
-  background-size: cover
+  background-size: cover;
 
 
 
-.App {
-  /* text-align: center; */
-  /* background-color: white; */
-  /* background-image: url(./media/comet.gif); */
-  /* opacity: 0.95;
-  background-position: fixed;
-  background-size: cover; */
+
   height: 100%;
   width:100%;
   color: white;
+}
 .container > div {
   background: #eee;
   padding: 1em;
