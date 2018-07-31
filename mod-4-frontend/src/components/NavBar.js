@@ -14,7 +14,7 @@ class Navbar extends Component {
         <a href="#">Dashboard</a>
       </li>
       <li className="sidebar-brand">
-        <a href="#">Shortcuts</a>
+        <a href="#">Planets</a>
       </li>
       <li className="sidebar-brand">
         <a href="#">Logout</a>
