@@ -3,49 +3,45 @@ html,body,#root {
   width: 100%;
 }
 .App {
-  text-align: center;
-  background-color: white;
+  position:fixed;
+  /* text-align: center; */
+  /* background-color: white; */
   /* background-image: url(./media/darkrift-orig_full.jpg); */
-  background-size: cover;
-
-
-
-
+  /* background-size: cover; */
   height: 100%;
   width:100%;
   color: white;
 }
-.container > div {
-  background: #eee;
-  padding: 1em;
+
+.video {
+  position:absolute;
+  height:100%;
+  z-index:-1;
+  /* opacity:0.9; */
 }
 
-.conatainer > div:nth-child(odd){
-  background: #ddd;
+
+.container > div {
+  background: #eee;
+  padding: 1.5em;
+  width: 50%;
+
+}
+
+.container > div:nth-child(odd){
+  background: linear-gradient(to bottom, rgba(192,192,192,0.5) 0%, rgba(192,192,192,0.5) 100%);
+  border-radius: 10px;
+  position:relative;
+  /* background: #ddd; */
 }
 .container {
   display: grid;
   grid-template-rows: 30% 70%;
   grid-row-gap: 1em;
-  border: black
+  border: black;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
-
-/* .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-} */
-
-/* .App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-} */

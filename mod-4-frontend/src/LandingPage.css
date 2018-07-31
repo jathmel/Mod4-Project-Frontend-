@@ -2,4 +2,9 @@
   display: grid;
   grid-template-rows: 30% 70%;
   grid-row-gap: 1em;
+  position:relative;
+  width: 25%;
+  text-align: center;
+  top: 30%;
+  margin-left: 40%
 }

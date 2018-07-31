@@ -1,7 +1,9 @@
 import React from 'react'
+import '../LoginSignup.css';
+
 const SignUp = (props) => {
     return(
-      <form onSubmit={(e) => props.handleSignUp(e, props.username, props.password, props.name)}>
+      <form className="form" onSubmit={(e) => props.handleSignUp(e, props.username, props.password, props.name)}>
         <input type="txt" value={props.name} placeholder='Name' onChange={props.updateName}/><br/>
         <input type="txt" value={props.username}placeholder='Username' onChange={props.updateUsername}/><br/>
         <input type="password" value={props.password} placeholder='Password' onChange={props.updatePassword}/><br/>
