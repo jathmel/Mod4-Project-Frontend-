@@ -1,0 +1,31 @@
+#DetailContainer {
+  width:38%;
+  margin-left: 30%;
+  top:25%;
+  position:relative;
+  /* background-color: grey; */
+  background: linear-gradient(to bottom, rgba(192,192,192,0.2) 0%, rgba(192,192,192,0.2) 100%);
+  /* text-align: center; */
+  /* display: inline-block; */
+}
+
+#PlanetDetail {
+  /* text-align: center;
+  width:100%;
+  margin-left: 0%;
+  top:25%;
+  position:relative; */
+  display: inline-block;
+}
+
+#imgDetail {
+  width:250px;
+  height:250px;
+  /* margin-left: 15px;
+  top:25%;
+  position:relative; */
+  display: inline-block;
+  padding:15px;
+}
+
+tr:nth-child(even) {background: linear-gradient(to bottom, rgba(192,192,192,0.4) 0%, rgba(192,192,192,0.4) 100%);}

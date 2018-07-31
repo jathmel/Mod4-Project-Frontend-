@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import '../PlanetItem.css';
+import HoverName from './HoverName'
+
+
 class PlanetItem extends Component {
+
+
   render() {
-
-    console.log(this.props)
     return (
-      <div className="PlanetItem" onClick={(e) => this.props.handlePlanetClick(this.props.planet)}>
-         <img  src={require(`../media/${this.props.planet.name.toLowerCase()}.jpg`)} alt='nothing' width="100" height="100"/>
-
+      <div className="PlanetItem" onClick={(e) => this.props.handlePlanetClick(this.props.planet)} onMouseOver={(e) => this.props.handlePlanetHover(this.props.planet)}>
+         <img id={this.props.planet.name} src={require(`../media/${this.props.planet.name}.png`)} alt='nothing' />
 
       </div>
     );
