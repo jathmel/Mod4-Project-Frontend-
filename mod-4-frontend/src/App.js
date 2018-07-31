@@ -35,7 +35,7 @@ class App extends Component {
         <div><h1>Space</h1></div>
         {this.state.currentUser ?
           <div>
-            <SpaceContainer />
+            <SpaceContainer currentUser={this.state.currentUser}/>
           </div>
           :
           <LandingPage handleSignUp={this.handleSignUp} handleLogIn={this.handleLogIn}/>}

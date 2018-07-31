@@ -5,6 +5,7 @@ import NavBar from './NavBar'
 class SpaceContainer extends Component {
 
   state = {
+    currentUser: this.props.currentUser,
     planets: [],
     singlePlanetDetail: '',
     showSinglePlanet: false,
@@ -40,9 +41,18 @@ class SpaceContainer extends Component {
 
 
   handleDetailClick = () => {
+    console.log(this.state.currentUser, this.state.singlePlanetDetail.id);
+    const progress = {user_id: this.state.currentUser.username, planet_id: this.state.singlePlanetDetail.id}
+    fetch('http://localhost:4000/api/v1/progresses', {
+      method: "POST",
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify({progress: progress})
+    }).then(
     this.setState({
       showSinglePlanet: !this.state.showSinglePlanet
-    })
+    }))
   }
 
   handleMouseOut = () => {
