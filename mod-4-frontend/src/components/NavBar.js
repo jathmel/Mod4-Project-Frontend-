@@ -4,7 +4,7 @@ import '../NavBar.css'
 class Navbar extends Component {
   render() {
     return (
-    <div id="sidebar-wrapper">
+    <div id="sidebar-wrapper" >
       <ul className="sidebar-nav">
 
       <li className="sidebar-brand">
@@ -12,9 +12,6 @@ class Navbar extends Component {
       </li>
       <li className="sidebar-brand">
         <a href="#">Dashboard</a>
-      </li>
-      <li className="sidebar-brand">
-        <a href="#">Shortcuts</a>
       </li>
       <li className="sidebar-brand">
         <a href="#">Logout</a>

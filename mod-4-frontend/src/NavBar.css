@@ -29,10 +29,11 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
-  font-size: 25px;
+  /* text-decoration: underline; */
+  font-size: 30px;
+  color:black;
 }
 
 a:active {
-  color:purple;
+  color:white;
 }

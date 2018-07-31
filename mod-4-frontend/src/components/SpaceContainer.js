@@ -9,11 +9,10 @@ class SpaceContainer extends Component {
     singlePlanetDetail: '',
     showSinglePlanet: false,
     hoverName: '',
-    isHovered: false
+    isHovered: false,
   }
 
   componentDidMount() {
-
     fetch('http://localhost:4000/api/v1/planets')
       .then(r => r.json())
       .then((data) => {
@@ -75,7 +74,7 @@ class SpaceContainer extends Component {
   render() {
     return (
       <div className="SpaceContainer" style={{height:"100%"}} onMouseOver={this.handleMouseOut}>
-        <NavBar />
+        <NavBar/>
         {this.showPage()}
       </div>
     );
