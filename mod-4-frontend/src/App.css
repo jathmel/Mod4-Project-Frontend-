@@ -3,24 +3,30 @@ html,body,#root {
   width: 100%;
 }
 .App {
-  text-align: center;
-  background-color: white;
+  position:fixed;
+  /* text-align: center; */
+  /* background-color: white; */
   /* background-image: url(./media/darkrift-orig_full.jpg); */
-  background-size: cover;
-
-
-
-
+  /* background-size: cover; */
   height: 100%;
   width:100%;
   color: white;
 }
+
+.video {
+  position:absolute;
+  height:100%;
+  z-index:-1;
+  /* opacity:0.9; */
+}
+
+
 .container > div {
   background: #eee;
   padding: 1em;
 }
 
-.conatainer > div:nth-child(odd){
+.container > div:nth-child(odd){
   background: #ddd;
 }
 .container {
@@ -34,18 +40,3 @@ html,body,#root {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
-
-/* .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-} */
-
-/* .App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-} */

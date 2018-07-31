@@ -32,16 +32,24 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div><h1>Space</h1></div>
-        {this.state.currentUser ?
+        <video className="video" src={video} autoPlay={'true'} loop> </video>
+          {this.state.currentUser ?
           <div>
             <SpaceContainer />
           </div>
           :
           <LandingPage handleSignUp={this.handleSignUp} handleLogIn={this.handleLogIn}/>}
-      </div>
+        </div>
     );
   }
 }
 
 export default App;
+
+//        {this.state.currentUser ?
+          //   <SpaceContainer />
+          // :
+          // <div></div>}
+// <div><h1>Space</h1></div>
+
+// <LandingPage handleSignUp={this.handleSignUp} handleLogIn={this.handleLogIn}/>
