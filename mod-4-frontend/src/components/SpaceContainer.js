@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import PlanetList from './PlanetList';
 import PlanetDetail from './PlanetDetail'
 import NavBar from './NavBar'
+import UserProfile from './UserProfile'
+import LandingPage from './LandingPage'
+import { Route, Switch, Redirect, withRouter } from 'react-router-dom'
+
+
 class SpaceContainer extends Component {
 
   state = {
@@ -53,7 +58,12 @@ class SpaceContainer extends Component {
       showSinglePlanet: !this.state.showSinglePlanet
     }))
   }
-
+  onDashboardClick = () => {
+    this.setState({
+      showSinglePlanet: !this.state.showSinglePlanet,
+      singlePlanetDetail: ''
+    })
+  }
   handleMouseOut = () => {
     this.setState({
       hoverName: '',
@@ -67,7 +77,7 @@ class SpaceContainer extends Component {
       })
     }
 
-  showPage () {
+  showPage = () => {
     if (this.state.showSinglePlanet) {
       return (
         <PlanetDetail handleDetailClick={this.handleDetailClick} singlePlanetDetail={this.state.singlePlanetDetail} />
@@ -84,22 +94,23 @@ class SpaceContainer extends Component {
   render() {
     return (
       <div className="SpaceContainer" style={{height:"100%"}} onMouseOver={this.handleMouseOut}>
-        <NavBar currentUser={this.state.currentUser}/>
+        <NavBar currentUser={this.state.currentUser} logOut={this.props.logOut} onDashboardClick={this.onDashboardClick}/>
         <Switch>
-          <Route path="/profile" render={() => {
+          <Route path="/profile" render={(props) => {
               return <UserProfile currentUser={this.state.currentUser}/>
             }}/>
-          <Route path="/Dashboard" render={() => {
-              return <PlanetList />
+          <Route path="/dashboard" render={() => {
+              return this.showPage()
             }}/>
           <Route path="/login" render={() => {
-              return <UserProfile currentUser={this.state.currentUser}/>
-            }}/>
+            return (this.state.current_user ? <Redirect to="/dashboard" />
+            : <LandingPage/>)
+            }} />
         </Switch>
-        {this.showPage()}
+        {/* this.showPage() */}
       </div>
     );
   }
 }
 
-export default SpaceContainer;
+export default withRouter(SpaceContainer);

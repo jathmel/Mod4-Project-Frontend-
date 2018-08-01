@@ -4,6 +4,7 @@ import LandingPage from './components/LandingPage'
 import SpaceContainer from './components/SpaceContainer'
 import video from './media/Stars.mp4'
 import { createUser, getUser } from './adapters/Adapter'
+import { BrowserRouter } from 'react-router-dom'
 
 
 
@@ -14,7 +15,6 @@ class App extends Component {
 
   logOut = () => {
     this.setState({ currentUser: null })
-    this.props.history.push('/login')
   }
 
   handleLogIn = (e, username, password) => {
@@ -40,7 +40,9 @@ class App extends Component {
         <video className="video" src={video} autoPlay={'true'} loop> </video>
           {this.state.currentUser ?
           <div>
-            <SpaceContainer currentUser={this.state.currentUser} logOut={this.logOut}/>
+            <BrowserRouter>
+              <SpaceContainer currentUser={this.state.currentUser} logOut={this.logOut}/>
+            </BrowserRouter>
           </div>
           :
           <LandingPage handleSignUp={this.handleSignUp} handleLogIn={this.handleLogIn}/>}
@@ -50,6 +52,8 @@ class App extends Component {
 }
 
 export default App;
+
+
 
 //        {this.state.currentUser ?
           //   <SpaceContainer />
