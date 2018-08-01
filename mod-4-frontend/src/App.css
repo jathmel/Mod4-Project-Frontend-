@@ -11,8 +11,12 @@ html,body,#root {
   height: 100%;
   width:100%;
   color: white;
+  font-family: "space";
 }
-
+@font-face {
+  font-family: "space";
+  src: url("./media/aspace_light_demo.otf");
+}
 .video {
   position:absolute;
   height:100%;
