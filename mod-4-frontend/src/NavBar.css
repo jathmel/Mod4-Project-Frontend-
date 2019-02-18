@@ -1,9 +1,9 @@
 #sidebar-wrapper {
-  position:relative;
+  position:sticky;
   float: right;
   width: 15%;
   background: linear-gradient(to bottom, rgba(0,0,128,0.4) 0%, rgba(0,0,128,0.4) 100%);
-  height: 1000px;
+  height: 600px;
 
 }
 

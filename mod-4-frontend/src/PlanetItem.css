@@ -9,6 +9,10 @@
   width: 5px;
 }
 
+.planetName {
+  position: absolute;
+}
+
 #Mercury {
     -webkit-animation: mercuryOrbit 17s linear infinite;
 }

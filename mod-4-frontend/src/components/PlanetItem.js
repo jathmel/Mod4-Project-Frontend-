@@ -10,7 +10,7 @@ class PlanetItem extends Component {
     console.log(this.props.isHovered)
     if (this.props.isHovered) {
       return (
-        <p style={{color:"white"}}>{this.props.planet.name}</p>
+        <p className="planetName" style={{color:"white"}}>{this.props.planet.name}</p>
       )
     }
   }
@@ -36,10 +36,11 @@ class PlanetItem extends Component {
         <div id ={this.props.planet.name} className="PlanetItem"
         onClick={(e) => this.props.handlePlanetClick(this.props.planet)}
         onMouseOver={(e) => this.props.handlePlanetHover(this.props.planet) } >
+
           {this.showItemPage()}
+
           <img style={{width:this.size(this.props.planet.name), height:this.size(this.props.planet.name)}} src={require(`../media/${this.props.planet.name}.png`)} alt='nothing'/>
        </div>
-
 
     );
   }

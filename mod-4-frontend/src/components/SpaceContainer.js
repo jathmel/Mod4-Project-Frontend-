@@ -29,13 +29,6 @@ class SpaceContainer extends Component {
     })
   }
 
-  // showPlanetName = () => {
-  //   const planetNameArr=["Earth", "Mars", "Venus", "Jupiter", "Uranus", "Saturn", "Neptune", "Mercury"]
-  //   if (this.state.hoverName.includes(planetNameArr) ) {
-  //     return (console.log("hiiiiiii"))
-  //   }
-  // }
-
 
 
   handleDetailClick = () => {
@@ -52,9 +45,9 @@ class SpaceContainer extends Component {
   }
 
   handlePlanetHover = (planet) => {
-      this.setState({
-        isHovered: !this.state.isHovered
-      })
+    this.setState({
+      isHovered: !this.state.isHovered
+    })
     }
 
   showPage () {
