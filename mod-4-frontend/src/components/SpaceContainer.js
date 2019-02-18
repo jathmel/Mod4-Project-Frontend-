@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PlanetList from './PlanetList';
 import PlanetDetail from './PlanetDetail'
 import NavBar from './NavBar'
+
 class SpaceContainer extends Component {
 
   state = {
@@ -11,7 +12,7 @@ class SpaceContainer extends Component {
     hoverName: '',
     isHovered: false
   }
-
+// will only be called once
   componentDidMount() {
     fetch('https://dry-plains-91502.herokuapp.com/planets.json')
       .then(r => r.json())
